@@ -1,0 +1,255 @@
+<doctype !html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!--script type="text/javascript" src = "https://cdn.rawgit.com/peachananr/purejs-onepage-scroll/master/onepagescroll.min.js"></script>-->
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/peachananr/purejs-onepage-scroll/master/onepage-scroll.css"/>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/jquery.onepage-scroll.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/onepage-scroll.min.css">
+    <link rel="stylesheet" type="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/modal.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/modal.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.1/angular-material.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.1/angular-material.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/components/icon.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/components/grid.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+          font-family: 'Open Sans', sans-serif;
+        }
+        strong {
+    font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".main").onepage_scroll({
+           sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+           easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                            // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+           animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+           pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+           updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+           beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+           afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+           loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+           keyboard: true,                  // You can activate the keyboard controls
+           responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                            // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                            // the browser's width is less than 600, the fallback will kick in.
+           direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+        });
+        $('#couchbaseModalButton').click(function(){
+            $('.ui.basic.modal').modal('show');    
+         });
+    });
+    </script>
+    <div class="main">
+    <section class="intro">
+        <style>
+            .intro {
+                /*background-image: url("subtle_white_mini_waves.png");
+                background-repeat: repeat;
+                background: url("introback.png") no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;*/
+            }
+        </style>
+        <br/>
+        <span class="text-center"><h3><font color="grey">Pranav Mayuram</font></h3></span>
+        <br/>
+        <style>
+            .circular {
+                width: 150px;
+                height: 150px;
+                border-radius: 75px;
+                -webkit-border-radius: 75px;
+                -moz-border-radius: 75px;
+            }
+            .me-circular{
+             margin: auto;
+             width: 200px;
+             height: 200px;
+             background-image: url('me.png');
+             background-size: cover;
+             display: block;
+             border-radius: 100px;
+             -webkit-border-radius: 100px;
+             -moz-border-radius: 100px;
+             box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+            -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+            }
+        </style>
+        <br/>
+        <br/>
+        <div class="center-block">
+            <div class="me-circular"></div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="text-center">
+        <p>Full stack web developer looking for opportunities to further enhance my back-end knowledge.</p>
+        <p>Work heavily with Node.js, Angular.js, and Couchbase Server for scalable, useable software.</p>
+        <p>I feel like I've done some interesting things, so scroll down to find out more about me.</p>
+        <p>Rather than simply restate my resume, I hope to provide different insights into my work, school and projects.</p>
+        </div>
+        <!--
+        <div class="valign-wrapper">
+        <div class="row valign">
+        <div class="text-center">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>-->
+    </section>
+    <section class="WorkExperience">
+        <span class="text-center"><h3><font color="grey">Work Experience</font></h3></span>
+        <br/>
+        <md-content class="md-padding">
+        <div class="text-center">
+            <img src="couchbase.png" width="150"/>
+            <br/>
+            <br/>
+            <p>Couchbase is a NoSQL start-up, that has recently gained attention for their SQL-like query language (N1QL).</p>
+            <p><u>Developed areas of the testing framework:</u></p>
+            <p>Created complex queries to strain the database; expose potential issues.</p>
+            <p>Worked on deep query semantics with the N1QL team.</p>
+            <!--<p>Worked closely with product managers to improve documentation while Couchbase Server 4.0 was in beta.</p>-->
+            <p><u>Developed customizable, Open Source, social network framework (Touchbase) with Couchbase and Node.js (no prior web experience).</u></p>
+            <!--<p>Touchbase is an , built on the concept of customizability.</p>-->
+            <p>Intelligent search algorithm, modular code design, fully customizable, reusable REST APIs.</p>
+            <p>In-depth user documentation (architecture, index of REST APIs, etc.), as well as technical blogs about development process.</p>
+            <p>Touchbase is currently being made into a sample app to show how to use N1QL and Node.js.</p>
+            <br/>
+            <img src="lsv.png" width="150"/>
+            <br/>
+            <br/>
+            <p>Worked closely with traders, and financial software and built foundational understanding of financial analysis and trading.</p>
+            <p>Maintained daily cash flow balances, and used aspects of code in Microsoft Excel to automate parts of the process.</p>
+            <p>Talked to partners and worked on crucial trades using Charles Rivers to execute trades in expanding global markets.</p>
+        </div>
+        </md-content>
+    </section>
+    <section class= "Projects">
+        <span class="text-center"><h3><font color="grey">Projects</font></h3></span>
+        <br/>
+        <style>
+            .center-block {
+                float: none;
+            }
+            .row-centered {
+                text-align:center;
+            }
+            .col-centered {
+                display:inline-block;
+                float:none;
+                /* reset the text-align */
+                text-align:left;
+                /* inline-block space fix */
+                margin-right:-4px;
+            }
+        </style>
+        <md-content class="md-padding">
+        <div class="row row-centered">
+        <div class="col-sm-3 col-centered">
+            <div class="card-panel hoverable" style="z-index:10;">
+                <br/>
+                <div class="card-content waves-effect waves-block waves-light">
+                  <div class="text-center">
+                    <img src="CrowdPlay.png" height="100"/>
+                  <br/>
+                  <br/>
+                  <span class="card-title grey-text text-darken-4"><h5><strong>CrowdPlay</strong></h5></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <div class="card-panel hoverable" style="z-index:10;">
+                <br/>
+                <div class="card-content waves-effect waves-block waves-light">
+                  <div class="text-center">
+                    <img src="touchbase.png" height="100"/>
+                  <br/>
+                  <br/>
+                  <span class="card-title grey-text text-darken-4"><h5><strong>Touchbase</strong></h5></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <div class="card-panel hoverable" style="z-index:10;">
+                <br/>
+                <div class="card-content waves-effect waves-block waves-light">
+                  <div class="text-center">
+                    <img src="outsidehelp.png" height="100"/>
+                  <br/>
+                  <br/>
+                  <span class="card-title grey-text text-darken-4"><h5><strong>OutsideHelp</strong></h5></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row row-centered">
+        <div class="col-sm-3 col-centered">
+            <div class="card-panel hoverable" style="z-index:10;">
+                <br/>
+                <div class="card-content waves-effect waves-block waves-light">
+                  <div class="text-center">
+                    <img src="cpapM.png" height="100"/>
+                  <br/>
+                  <br/>
+                  <span class="card-title grey-text text-darken-4"><h5><strong>Michigan CPAP Bank</strong></h5></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <div class="card-panel hoverable" style="z-index:10;">
+                <br/>
+                <div class="card-content waves-effect waves-block waves-light">
+                  <div class="text-center">
+                    <img src="change.png" height="100"/>
+                  <br/>
+                  <br/>
+                  <span class="card-title grey-text text-darken-4"><h5><strong>ChangeiOS</strong></h5></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </md-content>
+    </section>
+    </div>
+</body>
