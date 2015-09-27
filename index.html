@@ -5,6 +5,13 @@
     <!--<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/peachananr/purejs-onepage-scroll/master/onepage-scroll.css"/>-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/jquery.onepage-scroll.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/onepage-scroll.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/transition.min.css"/>
+    <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/transition.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/components/icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/components/grid.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/dimmer.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/dimmer.min.js"></script>
     <link rel="stylesheet" type="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/modal.min.css"/>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/modal.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -15,17 +22,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.1/angular-material.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/components/icon.min.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/components/grid.min.css"/>
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css"/>
-      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.1/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <style>
         body {
           font-family: 'Open Sans', sans-serif;
@@ -42,7 +46,7 @@
            sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
            easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                             // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-           animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+           animationTime: 666,             // AnimationTime let you define how long each section takes to animate
            pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
            updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
            beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
@@ -54,8 +58,13 @@
                                             // the browser's width is less than 600, the fallback will kick in.
            direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
         });
-        $('#couchbaseModalButton').click(function(){
-            $('.ui.basic.modal').modal('show');    
+        $('#modalButton').click(function(){
+            console.log("hello");
+            $('.ui.modal')
+                .modal({
+                    transition : 'slide down'
+                })
+                .modal('show');
          });
     });
     </script>
@@ -97,6 +106,56 @@
             -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .8);
             -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .8);
             }
+            .modalDialog {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 99999;
+                opacity:0;
+                -webkit-transition: opacity 400ms ease-in;
+                -moz-transition: opacity 400ms ease-in;
+                transition: opacity 400ms ease-in;
+                pointer-events: none;
+            }
+            .modalDialog:target {
+                opacity:1;
+                pointer-events: auto;
+            }
+            .modalDialog > div {
+                width: 400px;
+                position: relative;
+                margin: 10% auto;
+                padding: 5px 20px 13px 20px;
+                border-radius: 10px;
+                background: #fff;
+                background: -moz-linear-gradient(#fff, #999);
+                background: -webkit-linear-gradient(#fff, #999);
+                background: -o-linear-gradient(#fff, #999);
+            }
+            .close {
+                background: #606061;
+                color: #FFFFFF;
+                line-height: 25px;
+                position: absolute;
+                right: -12px;
+                text-align: center;
+                top: -10px;
+                width: 24px;
+                text-decoration: none;
+                font-weight: bold;
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                border-radius: 12px;
+                -moz-box-shadow: 1px 1px 3px #000;
+                -webkit-box-shadow: 1px 1px 3px #000;
+                box-shadow: 1px 1px 3px #000;
+            }
+            .close:hover {
+                background: #00d9ff;
+            }
         </style>
         <br/>
         <br/>
@@ -135,12 +194,13 @@
     <section class="WorkExperience">
         <span class="text-center"><h3><font color="grey">Work Experience</font></h3></span>
         <br/>
-        <md-content class="md-padding">
         <div class="text-center">
             <img src="couchbase.png" width="150"/>
             <br/>
             <br/>
-            <p>Couchbase is a NoSQL start-up, that has recently gained attention for their SQL-like query language (N1QL).</p>
+            <!--<p>Couchbase is a NoSQL start-up, that has recently gained attention for their SQL-like query language (N1QL).</p>-->
+        </div>
+        <div class="col-sm-offset-1">
             <p><u>Developed areas of the testing framework:</u></p>
             <p>Created complex queries to strain the database; expose potential issues.</p>
             <p>Worked on deep query semantics with the N1QL team.</p>
@@ -150,15 +210,18 @@
             <p>Intelligent search algorithm, modular code design, fully customizable, reusable REST APIs.</p>
             <p>In-depth user documentation (architecture, index of REST APIs, etc.), as well as technical blogs about development process.</p>
             <p>Touchbase is currently being made into a sample app to show how to use N1QL and Node.js.</p>
+        </div>
             <br/>
+        <div class="text-center">
             <img src="lsv.png" width="150"/>
+        </div>
+        <div class="col-sm-offset-1">
             <br/>
             <br/>
             <p>Worked closely with traders, and financial software and built foundational understanding of financial analysis and trading.</p>
             <p>Maintained daily cash flow balances, and used aspects of code in Microsoft Excel to automate parts of the process.</p>
             <p>Talked to partners and worked on crucial trades using Charles Rivers to execute trades in expanding global markets.</p>
         </div>
-        </md-content>
     </section>
     <section class= "Projects">
         <span class="text-center"><h3><font color="grey">Projects</font></h3></span>
@@ -182,6 +245,7 @@
         <md-content class="md-padding">
         <div class="row row-centered">
         <div class="col-sm-3 col-centered">
+            <a href="http://devpost.com/software/crowdplay-a7us4q">
             <div class="card-panel hoverable" style="z-index:10;">
                 <br/>
                 <div class="card-content waves-effect waves-block waves-light">
@@ -193,9 +257,11 @@
                   </div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="col-sm-3 col-centered">
-            <div class="card-panel hoverable" style="z-index:10;">
+            <a href="https://github.com/couchbaselabs/touchbase">
+            <div class="card-panel hoverable" style="z-index:10;" >
                 <br/>
                 <div class="card-content waves-effect waves-block waves-light">
                   <div class="text-center">
@@ -206,8 +272,10 @@
                   </div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="col-sm-3 col-centered">
+            <a href="https://github.com/pranavmayuram/OutsideHelp">
             <div class="card-panel hoverable" style="z-index:10;">
                 <br/>
                 <div class="card-content waves-effect waves-block waves-light">
@@ -219,10 +287,12 @@
                   </div>
                 </div>
             </div>
+            </a>
         </div>
         </div>
         <div class="row row-centered">
         <div class="col-sm-3 col-centered">
+            <a href="https://github.com/pranavmayuram/UMich-CPAP-Bank">
             <div class="card-panel hoverable" style="z-index:10;">
                 <br/>
                 <div class="card-content waves-effect waves-block waves-light">
@@ -234,8 +304,10 @@
                   </div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="col-sm-3 col-centered">
+            <a href="http://devpost.com/software/change-an-alarm-for-good">
             <div class="card-panel hoverable" style="z-index:10;">
                 <br/>
                 <div class="card-content waves-effect waves-block waves-light">
@@ -247,9 +319,33 @@
                   </div>
                 </div>
             </div>
+            </a>
         </div>
         </div>
         </md-content>
+    </section>
+    <section class="booyah">
+        <div class="row row-centered">
+        <span class="text-center"><h3><font color="grey">Skills</font></h3></span>
+        <br/>
+        <div class="row center">
+        <div class="col-sm-8 col-centered">
+         <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header active"><i class="newspaper icon"></i>First</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="cloud icon"></i>Second</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="users icon"></i>Third</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+          </ul>
+        </div> 
+        </div>           
     </section>
     </div>
 </body>
