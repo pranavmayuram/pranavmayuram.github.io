@@ -29,13 +29,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.1/angular-material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
     <style>
         body {
           font-family: 'Open Sans', sans-serif;
         }
         strong {
-    font-weight: 900;
+           font-weight: 700;
         }
     </style>
 </head>
@@ -166,12 +166,16 @@
         <br/>
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="text-center parent" style="position:relative;">
         <p>Computer Science student at University of Michigan Ann Arbor in the School of Engineering.</p>
         <p>Full stack web developer looking for opportunities to further enhance my back-end knowledge.</p>
         <p>Work heavily with Node.js, Angular.js, and Couchbase Server for scalable, useable applications.</p>
         <p>I feel like I've done some interesting things, so scroll down to find out more about me.</p>
         <p>Rather than simply restate my resume, I hope to provide different insights into my work, school and projects.</p>
+        </div>
+        <div class="child" style="position:absolute; right:100px; bottom:75px">
+            <p><strong>&nbsp;&nbsp;USE KEYS</strong></p>
+            <img src="arrowkeys.png" width="75">
         </div>
         <!--
         <div class="valign-wrapper">
@@ -192,6 +196,24 @@
         </div>
         </div>-->
     </section>
+    <section class="Education">
+        <span class="text-center"><h3><font color="grey">Education</font></h3></span>
+        <br/>
+        <br/>
+        <br/>
+        <div class="text-center">
+            <img src="michiganeecs.png" width="250"/>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="text-center">
+            <p><strong>Major: </strong> Computer Science in the School of Engineering (2018)</p>
+            <p><strong>Minor: </strong> Complex Systems (Differential Calculus and Social Systems)</p>
+            <p><strong>Research: </strong> EECS 399 - Database Research under Professor H V Jagadish</p>
+        </div>
+    </section>
     <section class="WorkExperience">
         <span class="text-center"><h3><font color="grey">Work Experience</font></h3></span>
         <div class="row row-centered">
@@ -201,11 +223,11 @@
             <img src="couchbase.png" width="110"/>
             <!--<p>Couchbase is a NoSQL start-up, that has recently gained attention for their SQL-like query language (N1QL).</p>-->
         </div>
-            <p><u>Developed areas of the testing framework:</u></p>
+            <p><strong>Developed areas of the testing framework:</strong></p>
             <p>Created complex queries to strain the database; expose potential issues.</p>
             <p>Worked on deep query semantics with the N1QL team.</p>
             <!--<p>Worked closely with product managers to improve documentation while Couchbase Server 4.0 was in beta.</p>-->
-            <p><u>Developed customizable, Open Source, social network framework (Touchbase) with Couchbase and Node.js (no prior web experience).</u></p>
+            <p><strong>Developed customizable, Open Source, social network framework (Touchbase) with Couchbase and Node.js (no prior web experience):</strong></p>
             <!--<p>Touchbase is an , built on the concept of customizability.</p>-->
             <p>Intelligent search algorithm, modular code design, fully customizable, reusable REST APIs.</p>
             <p>In-depth user documentation (architecture, index of REST APIs, etc.), as well as technical blogs about development process.</p>
